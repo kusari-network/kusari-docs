@@ -1,4 +1,4 @@
-# Become a Validator
+# Become a Kusari Validator
 
 ![Become a Validator](assets/swapdex-bull.png)
 
