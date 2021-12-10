@@ -98,27 +98,27 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
  
 ### Install swapdex Validator binaries
 The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder
-check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/swapdex)
+check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
 ```
-wget https://download.starkleytech.com/swapdex/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
+wget https://download.starkleytech.com/kusari/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 S
 ### Create User Account for Validator Operations
 For security reasons we recommended to run a validator as non-root user.
 For that we create a dedicated user account which will be used to run the validator.
 ```
-sudo adduser swapdex-validator
+sudo adduser kusari
 ```
 !!! info
     when adding the new account you will be asked to provide a password and some additional information.
     Only the password is mandatory, the other parameters can be left blank.
 
-### Create the SwapDex Validator Service File
+### Create the Kusari Validator Service File
 In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
-The following command creates a file named swapdex.service at the following location: /lib/systemd/system/
+The following command creates a file named kusari.service at the following location: /lib/systemd/system/
 
 ```
-sudo nano /lib/systemd/system/swapdex.service
+sudo nano /lib/systemd/system/kusari.service
 ```
 
 !!! warning
@@ -126,15 +126,15 @@ sudo nano /lib/systemd/system/swapdex.service
     Make sure to **change "A Node Name" and replace it your preferred name**
 
 
-**Content of the swapdex.service file**:
+**Content of the kusari.service file**:
 ```
 [Unit]
-Description=swapdex Validator
+Description=kusari Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "A Node Name" --validator --chain phoenix   
-User=swapdex
+ExecStart=/usr/bin/swapdex --port "30333" --name "A Node Name" --validator --chain kusari   
+User=kusari
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
@@ -148,27 +148,27 @@ WantedBy=multi-user.target
 
 then start the service
 ```
-sudo systemctl enable swapdex && sudo service swapdex start 
+sudo systemctl enable kusari && sudo service kusari start 
 ```
 
 ### Check if validator is started
-To ensure that the SwaDdex Validator process works please execute the following command:
+To ensure that the Kusari Validator process works please execute the following command:
 ```
-ps aux | grep swapdex
+ps aux | grep kusari
 ```
 
 You should see a similar output:
 ```
-swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain phoenix
+kusari   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
 ```
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/swapdex)
+Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/0x33ea848d1264596579ff49650d0a7b3a10fd60d9a82e7bf905c312034474765e](https://telemetry.polkadot.io/#list/0x33ea848d1264596579ff49650d0a7b3a10fd60d9a82e7bf905c312034474765e)
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (--name "A Node Name")
 
 !!! success
-    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDex testnet validator!
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari validator!
 
 
 ## Part 2 - Assign the node to an account
@@ -217,7 +217,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 ### Submitting the setKeys Transaction:
 
-Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fswapdex-rpc-testnet.starkleytech.com#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
+Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
 ![Validator](assets/valitador1.png)
 
 Select your stash account, controller account and so one

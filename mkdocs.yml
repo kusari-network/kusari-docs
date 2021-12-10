@@ -1,6 +1,6 @@
-site_name: SwapDex Wiki
+site_name: Kusari Wiki
 copyright: Copyright &copy; 2021 SwapDex
-repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
+repo_url: https://github.com/kusari-network/kusari-docs
 
 markdown_extensions:
   - admonition
