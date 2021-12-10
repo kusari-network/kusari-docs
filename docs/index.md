@@ -60,7 +60,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
             </a>
         </td>
         <td>
-            <a href="ttps://kusari-network.github.io/kusari-docs/deep-dives/bridges/">
+            <a href="https://kusari-network.github.io/kusari-docs/deep-dives/bridges/">
                 <img src="assets/swapdex-docs-bridge.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Bridges</h5>
