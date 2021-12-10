@@ -96,7 +96,7 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
 !!! success
     Congratulations! You implemented a fundamental layer of protection.
  
-### Install swapdex Validator binaries
+### Install Kusari Validator binaries
 The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder
 check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
 ```
@@ -203,7 +203,7 @@ Save your mnemonic seed
 then name your account and add a password
 ![Controller](assets/controllerAccount3.png) 
 
-Then send some TSDX (from your stash account) to cover the network fees
+Then send some KSI (from your stash account) to cover the network fees
 
 You can proceed to the next steps
 
