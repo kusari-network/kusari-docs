@@ -41,7 +41,7 @@ theme:
   
 plugins:
   - search
-  - mkdocs-video
+  
 
 extra:
   # Default mkdocs-material alternate links for untranslated pages
