@@ -43,7 +43,7 @@ sudo apt-get update
 We currently require that the clocks of all validators on the network stay reasonably in sync. The NTP client is a piece of software that allows you to synchronize your server's clock with the clocks of the remaining servers connected to the blockchain. 
 
 !!! info
-    If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:   
+    If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:  
     ```
     timedatectl
     ```
@@ -61,7 +61,7 @@ sudo ntpq -p
     Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks produced by your validator may not get accepted by the network. 
 
 
-## Installing the Kusari test network Binary
+## Installing the Kusari network Binary
 ---
 ### Install and enable Chrony
 We learned in the previous step that the new versions of Ubunutu ship with the NTP client by default. However, Chrony is another time sync tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
@@ -95,8 +95,8 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
 !!! success
     Congratulations! You implemented a fundamental layer of protection.
  
-### Install Kusari testnet Validator binaries
-The following command will fetch / download the Kusari Testnet validator binaries and copy them to a specific folder.
+### Install Kusari Validator binaries
+The following command will fetch / download the Kusari validator binaries and copy them to a specific folder.
 Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/swapdex)
 
 ```
@@ -115,7 +115,7 @@ sudo adduser swapdex
     when adding the new account you will be asked to provide a password and some additional information.
     Only the password is mandatory, the other parameters can be left blank.
 
-### Create the Kusari Testnet Validator Service File
+### Create the Kusari Validator Service File
 In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
 The following command creates a file named `swapdex.service` at the following location: `lib/systemd/system/`
 
@@ -161,14 +161,14 @@ sudo systemctl enable swapdex && sudo service swapdex start
     For more information on systemd you can watch this quick [tutorial](https://youtu.be/N1vgvhiyq0E) on YouTube.
 
 ### Check if validator is started
-To ensure that the Kusari Testnet Validator process works please execute the following command:
+To ensure that the Kusari Validator process works please execute the following command:
 ```
 ps aux | grep swapdex
 ```
 
 You should see a similar output:
 ```
-swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
+swapdex  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/0x811edb0ea924fcec6b9d10417c724d924d1c15a4ca500802a8bc3a02d6ae8494)
@@ -177,7 +177,7 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
 
 !!! success
-    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari Testnet Validator!
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a Kusari Validator!
 
 
 ## Part 2 - Assign the node to an account
@@ -192,8 +192,8 @@ The divison into two wallets or accounts is an additional security feature we im
 !!! hint
     In short:
     The **Stash-Account** is where you keep all the funds you want to stake. We recommend to protect it's private key with a hardware wallet like Ledger or Trezor.
-    The **Controller-Account**  is used to control actions related to your staking
-    However, you can start and operate a validator without hardware wallets. This may be a viable option on a testnet but is certainly not recommended once liqudity is provided.
+    The **Controller-Account** is used to control actions related to your staking
+    However, you can start and operate a validator without hardware wallets. This may be a viable option on a but is certainly not recommended once liqudity is provided.
 
 The Stash Account will be used to bond/unbond your funds and to choose the address of the Controller Account.
 The Controller Account will be used to take actions on behalf of the bonded funds. 
@@ -253,11 +253,11 @@ Copy the session key. It will look like this:
 0x13660593581b2e728ee32122636f8996c6fd9c22f33beaa05e2797899c5458b0c888149bf3c0b5ca7fb7296e69fefd85e4e3d5b76848db890207575e49031f37d846e78babf8051c123b498ffe6f12e712f97f6b2f3b54345ffe51145a16bb22187d415c2101b9883668ce93c46f7ba556b394c59781854737b6c941747c0964
 ``` 
 
-### Apply on Kusari Testnet Explorer
+### Apply on Kusari Explorer
 ---
 
-- Visit the substrate [testnet explorer](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/accounts)
-- Go to the Network Tab -> Staking -> Account Actions ([Link](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/staking/actions))
+- Visit the substrate [ explorer](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/accounts)
+- Go to the Network Tab -> Staking -> Account Actions ([Link](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/staking/actions))
 ![img](assets/validator_01.png)
 
 - Hit the `+ Validator` Button
@@ -287,7 +287,7 @@ You can also determine if you would like to receive nominations with the "allows
 
 - Hit bond & validate
 
-- Visit the **[Waiting Tab](https://substrate-explorer-testnet.swapdex.network/?rpc=wss%3A%2F%2Frpc-testnet.swapdex.network%2Fws#/staking/waiting)** to see your validator waiting until the era finishes
+- Visit the **[Waiting Tab](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/staking/waiting)** to see your validator waiting until the era finishes
 
 !!! success
     Alright mate! You are all set :D
