@@ -18,7 +18,7 @@ You can operate a network node on a local computer, a professional server-rig in
 !!! tip
     The most common way for a beginner to run a validator is on a VPS running Linux. You may choose whatever VPS providers that you prefer. 
 
-We benchmarked the transactions weights on the Smart Dex Chain Testnet on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
+We benchmarked the transactions weights on the Kusari Chain Testnet on standard hardware. We recommend that validators run at least the standard hardware to ensure they can process all blocks in time. The following are not minimum requirements, but if you decide to run with less than this, beware that you might have a performance issue.
 
 ### Lower-end Hardware :
 
@@ -62,7 +62,7 @@ sudo ntpq -p
     Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in ImOnline heartbeats making it on chain, but zero allocated blocks making it on chain. 
 
 
-## Installing the Smart Dex Chain Testnet Binary
+## Installing the Kusari Chain Testnet Binary
 
 ### Install and enable Chrony
 We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync. tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
