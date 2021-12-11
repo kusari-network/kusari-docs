@@ -97,10 +97,10 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
  
 ### Install Kusari Validator binaries
 The following command will fetch / download the Kusari validator binaries and copy them to a specific folder.
-Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/swapdex)
+Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
 
 ```
-wget https://download.starkleytech.com/swapdex/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
+wget https://download.starkleytech.com/kusari/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 !!! Warning
     Make sure that the link matches exactly and never use another source to download the binaries!
@@ -109,7 +109,7 @@ wget https://download.starkleytech.com/swapdex/FILE_NAME_FROM_ABOVE -O swapdex &
 For security reasons we recommend to run a validator as non-root user.
 For that we create a dedicated user account which will be used to run the validator.
 ```
-sudo adduser swapdex
+sudo adduser kusari
 ```
 !!! info
     when adding the new account you will be asked to provide a password and some additional information.
@@ -117,10 +117,10 @@ sudo adduser swapdex
 
 ### Create the Kusari Validator Service File
 In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
-The following command creates a file named `swapdex.service` at the following location: `lib/systemd/system/`
+The following command creates a file named `kusari.service` at the following location: `lib/systemd/system/`
 
 ```
-sudo nano /lib/systemd/system/swapdex.service
+sudo nano /lib/systemd/system/kusari.service
 ```
 
 !!! warning
@@ -131,12 +131,12 @@ sudo nano /lib/systemd/system/swapdex.service
 **Content of the swapdex.service file**:
 ``` linenums="1"
 [Unit]
-Description=swapdex Validator
+Description=Kusari Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain phoenix --telemetry-url 'wss://telemetry.polkadot.io/submit/ 0'
-User=swapdex
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain kusari 
+User=kusari
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
@@ -153,7 +153,7 @@ Hit ctrl+x and then hit Y to confirm save of the file.
 
 then start the service
 ```
-sudo systemctl enable swapdex && sudo service swapdex start 
+sudo systemctl enable kusari && sudo service kusari start 
 ```
 
 !!! Success
@@ -163,12 +163,12 @@ sudo systemctl enable swapdex && sudo service swapdex start
 ### Check if validator is started
 To ensure that the Kusari Validator process works please execute the following command:
 ```
-ps aux | grep swapdex
+ps aux | grep kusari
 ```
 
 You should see a similar output:
 ```
-swapdex  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
+kusari  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/0x811edb0ea924fcec6b9d10417c724d924d1c15a4ca500802a8bc3a02d6ae8494)
@@ -183,7 +183,7 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 ## Part 2 - Assign the node to an account
 ---
 The second part of this guide will complete the validator setup by connecting your server with your Substrate account.
-Make sure you have some TKSI in your substrate wallet. In case you need TKSI please see the [faucet](../get-started/faucet.md) and [claim](../get-started/claims.md) section. 
+Make sure you have some KSI in your substrate wallet. In case you need KSI please see the [claim](../get-started/claims.md) section. 
 
 ### What are stash and controller accounts?
 
@@ -256,8 +256,8 @@ Copy the session key. It will look like this:
 ### Apply on Kusari Explorer
 ---
 
-- Visit the substrate [ explorer](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/accounts)
-- Go to the Network Tab -> Staking -> Account Actions ([Link](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/staking/actions))
+- Visit the substrate [ explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts)
+- Go to the Network Tab -> Staking -> Account Actions ([Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions))
 ![img](assets/validator_01.png)
 
 - Hit the `+ Validator` Button
@@ -287,7 +287,7 @@ You can also determine if you would like to receive nominations with the "allows
 
 - Hit bond & validate
 
-- Visit the **[Waiting Tab](https://substrate-explorer-.swapdex.network/?rpc=wss%3A%2F%2Frpc-.swapdex.network%2Fws#/staking/waiting)** to see your validator waiting until the era finishes
+- Visit the **[Waiting Tab](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/waiting)** to see your validator waiting until the era finishes
 
 !!! success
     Alright mate! You are all set :D
