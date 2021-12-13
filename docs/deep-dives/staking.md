@@ -88,7 +88,7 @@ The **Controller** account is your hot wallet and acts on behalf of your stash a
 
 As we learned, validator slots are limited and they do most of the heavy lifting: they produce new block candidates in BABE (block production mechanism), vote, and reach a consensus in GRANDPA (block finality mechanism). In essence, validators validate the state transition function of the blockchain.
 
-Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their validators' performance (uptime), keeping an eye on changing commission rates (a validator can change commission at any time), and general health monitoring of their and their validators' account. 
+Nominators, on the other hand, have far fewer responsibilities. Those include monitoring their validators' performance (uptime), keeping an eye on changing commission rates (a validator can change commission at any time), and general health monitoring of their own and their validators' account. 
 
 <br></br>
 
@@ -188,7 +188,7 @@ penality = MIN((3*x/n)^2 , 1)
 
 **Misconduct**
 
-Misconducts are behavious that poses a security or monetary risk to the network or can cause mass collusions.
+Misconducts are behaviours that pose a security or monetary risk to the network or can cause mass collusions.
 Therefore, misconducts are the highest punished behaviours in the Kusari and Smart DEX Chain networks. 
 Reported and confirmed slashes in that category can lead to the transfer of the funds inside the validator pool to the treasury and could ulitmately be burned.  
 
@@ -205,7 +205,7 @@ Reported and confirmed slashes in that category can lead to the transfer of the 
 | Misconduct   | 100% Slash                                                     | 100% Slash                                                                                                 | 100% Slash                                                  |
 
 !!! warning
-    All slashes include loss of all nominaors!
+    All slashes include loss of all nominators!
 
 ### **Chilling**
 
@@ -275,7 +275,7 @@ This can be cause by:
 
 In this paragraph we assume that misconduct is conducted unintentionally and want to provide some reasons for a slash under unintentional misconduct.
 
-- Using a binary from a thirs-party location that might be altered 
+- Using a binary from a third-party location that might be altered 
 - Compromised server in which an unwanted third party alters code in an undesired manner
 
 ### **How to mitigate the risk of being slashed on unintentional misconduct?**
