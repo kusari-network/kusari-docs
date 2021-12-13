@@ -81,6 +81,7 @@ Configure firewall ports to allow SSH and Validator service to communicate.
 ```
 sudo ufw allow 22
 sudo ufw allow 30333
+ufw allow ntp
 sudo ufw enable
 ```
 
