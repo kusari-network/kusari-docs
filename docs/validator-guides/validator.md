@@ -31,7 +31,7 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
     Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari test network. 
 
 
-## Using Ubuntu 20.04 & 21.04: 
+## Using Ubuntu 21.04: 
 ---
 ### Update your Ubuntu
 ```
@@ -171,6 +171,11 @@ You should see a similar output:
 ```
 kusari  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
 ```
+### Reboot to be sure everything is restarted correctly:
+```
+sudo reboot -h now
+```
+
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/0x811edb0ea924fcec6b9d10417c724d924d1c15a4ca500802a8bc3a02d6ae8494)
 
