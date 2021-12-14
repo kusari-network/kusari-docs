@@ -177,7 +177,7 @@ sudo reboot -h now
 ```
 
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/0x811edb0ea924fcec6b9d10417c724d924d1c15a4ca500802a8bc3a02d6ae8494)
+Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5](https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5)
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
