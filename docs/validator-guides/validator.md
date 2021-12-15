@@ -101,7 +101,7 @@ The following command will fetch / download the Kusari validator binaries and co
 Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
 
 ```
-wget https://download.starkleytech.com/kusari/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
+wget https://download.starkleytech.com/kusari/{==FILE_NAME_FROM_ABOVE==} -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 !!! Warning
     Make sure that the link matches exactly and never use another source to download the binaries!
