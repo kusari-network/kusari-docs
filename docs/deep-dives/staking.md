@@ -130,7 +130,7 @@ We group the root causes into three distinct clusters:
 **Liveliness**
 
 Liveliness is concerned about the ability of the validaor to be online and responsive. 
-If a validator misses to produce a block or send a heatbeat signal during an era the validator will be considered as offline and will be but on chill.
+If a validator misses to produce a block or send a heatbeat signal during an era the validator will be considered as offline and will be put on chill.
 In that case, no slashing of coins takes place but since the validator did not contribute any work there are also no block rewards payed out to the validator pool. 
 
 **Equivocation**
