@@ -1,7 +1,7 @@
 # <b>HOW TO SETUP A VALIDATOR</b>
 ---
 
-The following guide will teach you how to set up a Kusari validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
+The following guide will teach you how to set up a Kusari test validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
 Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Kusari has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
 
@@ -28,10 +28,10 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
 - 16GB ram, 300 GB Storage, 6 CPU, <strong>stable server uplink connection with fixed IP</strong>
 
 !!! info
-    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari network. 
+    Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari test network. 
 
 
-## Using Ubuntu 20.04 & 21.04: 
+## Using Ubuntu 21.04: 
 ---
 ### Update your Ubuntu
 ```
@@ -43,7 +43,7 @@ sudo apt-get update
 We currently require that the clocks of all validators on the network stay reasonably in sync. The NTP client is a piece of software that allows you to synchronize your server's clock with the clocks of the remaining servers connected to the blockchain. 
 
 !!! info
-    If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:   
+    If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:  
     ```
     timedatectl
     ```
@@ -81,6 +81,7 @@ Configure firewall ports to allow SSH and Validator service to communicate.
 ```
 sudo ufw allow 22
 sudo ufw allow 30333
+sudo ufw allow ntp
 sudo ufw enable
 ```
 
@@ -96,13 +97,24 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
     Congratulations! You implemented a fundamental layer of protection.
  
 ### Install Kusari Validator binaries
-The following command will fetch / download the Kusari validator binaries and copy them to a specific folder. [Check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari/).
+The following command will fetch / download the Kusari validator binaries and copy them to a specific folder.
+Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
+
 ```
-wget https://download.starkleytech.com/kusari/FILE_NAME_FROM_ABOVE -O kusari && sudo chmod +x ./kusari && sudo mv ./kusari /usr/bin/kusari
+wget https://download.starkleytech.com/kusari/{==FILE_NAME_FROM_ABOVE==} -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 !!! Warning
     Make sure that the link matches exactly and never use another source to download the binaries!
 
+### Create User Account for Validator Operations
+For security reasons we recommend to run a validator as non-root user.
+For that we create a dedicated user account which will be used to run the validator.
+```
+sudo adduser kusari
+```
+!!! info
+    when adding the new account you will be asked to provide a password and some additional information.
+    Only the password is mandatory, the other parameters can be left blank.
 
 ### Create the Kusari Validator Service File
 In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
@@ -117,14 +129,15 @@ sudo nano /lib/systemd/system/kusari.service
     Make sure to **change "A Node Name" and replace it your preferred name**
 
 
-**Content of the kusari.service file**:
+**Content of the swapdex.service file**:
 ``` linenums="1"
 [Unit]
-Description=kusari Validator
+Description=Kusari Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/ksuari --port "30333" --name "{==A Node Name==}" --validator --chain kusari   
+ExecStart=/usr/bin/swapdex --port "30333" --name "{==A Node Name==}" --validator --chain kusari 
+User=kusari
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
@@ -133,6 +146,9 @@ LimitNOFILE=8192
 [Install]
 WantedBy=multi-user.target
 ```
+
+Hit ctrl+x and then hit Y to confirm save of the file.
+
 !!! hint
     If you want to add a more ports to enable RPC calls, a websocket or monitoring, you can set it up by including the following flags in line 6. `--prometheus-port` `--rpc-port` and `--ws-port`
 
@@ -153,10 +169,15 @@ ps aux | grep kusari
 
 You should see a similar output:
 ```
-kusari   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/kusari --port 30333 --name "A Node Name" --validator --chain kusari
+kusari  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
+```
+### Reboot to be sure everything is restarted correctly:
+```
+sudo reboot -h now
 ```
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/kusari](https://telemetry.polkadot.io/#list/kusari)
+
+Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5](https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5)
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
@@ -168,7 +189,7 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 ## Part 2 - Assign the node to an account
 ---
 The second part of this guide will complete the validator setup by connecting your server with your Substrate account.
-Make sure you have some TKSI in your substrate wallet. In case you need TKSI please see the [faucet](../get-started/faucet.md) and [claim](../get-started/claims.md) section. 
+Make sure you have some KSI in your substrate wallet. In case you need KSI please see the [claim](../get-started/claims.md) section. 
 
 ### What are stash and controller accounts?
 
@@ -177,8 +198,8 @@ The divison into two wallets or accounts is an additional security feature we im
 !!! hint
     In short:
     The **Stash-Account** is where you keep all the funds you want to stake. We recommend to protect it's private key with a hardware wallet like Ledger or Trezor.
-    The **Controller-Account**  is used to control actions related to your staking
-    However, you can start and operate a validator without hardware wallets.
+    The **Controller-Account** is used to control actions related to your staking
+    However, you can start and operate a validator without hardware wallets. This may be a viable option on a but is certainly not recommended once liqudity is provided.
 
 The Stash Account will be used to bond/unbond your funds and to choose the address of the Controller Account.
 The Controller Account will be used to take actions on behalf of the bonded funds. 
@@ -191,7 +212,6 @@ Before we start with the creation of both accounts please consider to download t
 
 !!! tip
     :point_right: Download [Pokadot.js](https://polkadot.js.org/extension/) browser extension
-    :point_right: [See explainer video on wallets](https://youtu.be/qM36ndMLn5o)
 
 ### Create the Controller Account
 
@@ -229,7 +249,7 @@ Login to your VPS server.
 Session keys are needed to associate your node with your controller account. To generate the session keys you can run the following command in your terminal: 
 
 ```
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:8545
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933
 ```
 
 The output will have a hex-encoded "result" field. The result is the concatenation of the four public keys. Save this result for a later step.
@@ -239,10 +259,10 @@ Copy the session key. It will look like this:
 0x13660593581b2e728ee32122636f8996c6fd9c22f33beaa05e2797899c5458b0c888149bf3c0b5ca7fb7296e69fefd85e4e3d5b76848db890207575e49031f37d846e78babf8051c123b498ffe6f12e712f97f6b2f3b54345ffe51145a16bb22187d415c2101b9883668ce93c46f7ba556b394c59781854737b6c941747c0964
 ``` 
 
-### Apply on Kusari Substrate Explorer
+### Apply on Kusari Explorer
 ---
 
-- Visit the substrate [substrate explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts)
+- Visit the substrate [ explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts)
 - Go to the Network Tab -> Staking -> Account Actions ([Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions))
 ![img](assets/validator_01.png)
 
