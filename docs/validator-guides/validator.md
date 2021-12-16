@@ -147,7 +147,7 @@ LimitNOFILE=8192
 WantedBy=multi-user.target
 ```
 
-Hit ctrl+x and then hit Y to confirm save of the file.
+Hit "ctrl+x", then press "y" to confirm the save of the file and then hit "Enter" to exit.
 
 !!! hint
     If you want to add a more ports to enable RPC calls, a websocket or monitoring, you can set it up by including the following flags in line 6. `--prometheus-port` `--rpc-port` and `--ws-port`
