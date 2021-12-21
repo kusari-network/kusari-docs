@@ -61,7 +61,7 @@ In this step you can choose to either connect to your MetaMask wallet to automat
 
 ### <b> STEP 03 - Amount </b>
 
-In this step you need to select the amonut you want to transfer and confirm by clicking on the "Transfer Amount" button.
+In this step you need to select the amount you want to transfer and confirm by clicking on the "Transfer Amount" button.
 
 ![img](assets/Internal-transfer-step-03.png#center)
 
