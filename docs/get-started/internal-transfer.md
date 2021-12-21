@@ -12,8 +12,8 @@ Second, I will elaborate a bit more on the concept so that the interested lads c
 
 ## <b> PART 1 - WALKTHROUGH </b>
 !!! Hint
-    You can access the TRANSFER function here: LINK
-    You can watch me walk you through the process in this video: LINK
+    You can access the TRANSFER function here: LINK <br>
+    You can watch me walk you through the process in this video: <a href="https://youtu.be/oZM_EoZgCAo" target="_blank"> Visit YouTube </a> 
 
 The transfer is done in four (4) steps:
 
