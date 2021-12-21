@@ -67,6 +67,7 @@ nav:
       - 'get-started/index.md'
       - 'Faucet': 'get-started/faucet.md'
       - 'Claims': 'get-started/claims.md'
+      - 'Transfers' 'get-started/internal-transfer.md'
       - 'Endpoints': 'get-started/endpoints.md'
       - 'Transer Balances': 'get-started/transfer-balances.md'
   - 'What to Try?':
