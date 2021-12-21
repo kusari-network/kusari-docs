@@ -1,4 +1,4 @@
-# <b>INTERNAL TRANSFER OF BALANACES</b>
+# <b>INTERNAL TRANSFER OF BALANCES</b>
 ---
 Cheers Friends, 
 
