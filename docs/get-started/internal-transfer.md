@@ -2,7 +2,7 @@
 ---
 Cheers Friends, 
 
-this guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
+This guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
 Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to Kusari.
 Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades you must use the EVM.
 
@@ -24,26 +24,26 @@ The tansfer is done in four (4) steps:
 
 ### <b> STEP 01 - Setup </b>
 
-!!! hint
+!!! Hint
     Make sure you selected the "Transfers" function of your DApp (see picture below)
 
 ![img](assets/Internal-transfer-step-01.png#center)
 
 
-!!! hint 
+!!! Hint 
     You can change the transfer direction with the center button.
     Confirm the direction by clicking on next
 
 ![img](assets/Internal-transfer-step-011.png#center)
 
-!!! hint 
+!!! Hint 
     Click on "Connect SwapDex Account" to connect your substrate wallet to the DApp. 
     This substrate address need to hold the funds you wish to transfer.
     If you are using the polkadot.js browser extension to manage your addresses then the DApp will offer you a dropdown menu.
 
 ![img](assets/Internal-transfer-step-012.png#center)
 
-!!! hint
+!!! Hint
     Click next once you selected your address.
     If you have trouble seeing the dropdown please reaload the page or close your browser and restart the process.
 
@@ -53,7 +53,7 @@ In this step you can choose to either connect to your MetaMask wallet to automat
 
 ![img](assets/Internal-transfer-step-02.png#center)
 
-!!! hint
+!!! Hint
     Once you selected a target address you can confirm by clicking on next.
     You need to confirm the selected accounts and click on "Ok"
 
@@ -65,7 +65,7 @@ In this step you need to select the amonut you want to transfer and confirm by c
 
 ![img](assets/Internal-transfer-step-03.png#center)
 
-!!! hint
+!!! Hint
     Open the substrate or evm explorer to be prepared to check that the tranfer went through successfully
     substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer)
     EVM explorer [Link](https://evm.kusari.network/)
@@ -77,23 +77,23 @@ Confirm the transfer by hitting the "Sign and Send" button.
 
 ![img](assets/Internal-transfer-step-04.png#center)
 
-!!! hint
+!!! Hint
     Sign with your substrate account.
 
 ![img](assets/Internal-transfer-step-041.png#center)
 
-!!! hint 
+!!! Hint 
     If everything went fine you will see a success message at the button of the page
 
 ![img](assets/Internal-transfer-step-042.png#center)
 
-!!! hint 
+!!! Hint 
     Now head over to the substrate explorer to check if the transfer was successfully written into a block
 
 ![img](assets/Internal-transfer-step-043.png#center)
 
 
-!!! success
+!!! Success
     Congrats, you successfully swapped KSI from the substrate to the EVM side.
     Feel free to reverse the swap and use the tranfer function to your needs. 
 
