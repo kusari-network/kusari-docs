@@ -29,14 +29,8 @@ The transfer is done in four (4) steps:
 
 ![img](assets/Internal-transfer-step-01.png#center)
 
-
-<<<<<<< HEAD
 !!! hint 
     You can change the transfer directly with the center button.
-=======
-!!! Hint 
-    You can change the transfer direction with the center button.
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
     Confirm the direction by clicking on next
 
 ![img](assets/Internal-transfer-step-011.png#center)
@@ -48,15 +42,9 @@ The transfer is done in four (4) steps:
 
 ![img](assets/Internal-transfer-step-012.png#center)
 
-<<<<<<< HEAD
 !!! hint
     Click next once you have selected your address.
     If you have trouble seeing the dropdown, please reload the page or close your browser and restart the process.
-=======
-!!! Hint
-    Click next once you selected your address.
-    If you have trouble seeing the dropdown please reaload the page or close your browser and restart the process.
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
 
 ### <b> STEP 02 - Origin and Destination Address </b>
 
@@ -64,21 +52,14 @@ In this step, you can choose to either connect to your MetaMask wallet and autom
 
 ![img](assets/Internal-transfer-step-02.png#center)
 
-<<<<<<< HEAD
 !!! hint
     Once you have selected a target address, you can confirm by clicking next.
     You need to confirm the selected accounts and click on "Ok".
-=======
-!!! Hint
-    Once you selected a target address you can confirm by clicking on next.
-    You need to confirm the selected accounts and click on "Ok"
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
 
 ![img](assets/Internal-transfer-step-021.png#center)
 
 ### <b> STEP 03 - Amount </b>
 
-<<<<<<< HEAD
 In this step, you need to select the amount you want to transfer and confirm by clicking on the "Transfer Amount" button.
 
 !!! Warning
@@ -88,19 +69,9 @@ In this step, you need to select the amount you want to transfer and confirm by 
 ![img](assets/Internal-transfer-step-03.png#center)
 
 !!! hint
-    Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully. <br>
-    Substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer) <br>
-=======
-In this step you need to select the amount you want to transfer and confirm by clicking on the "Transfer Amount" button.
-
-![img](assets/Internal-transfer-step-03.png#center)
-
-!!! Hint
-    Open the substrate or evm explorer to be prepared to check that the tranfer went through successfully
-    substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer)
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
+    Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully.
+    Substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer)
     EVM explorer [Link](https://evm.kusari.network/)
-
 
 ### <b> STEP 04 - Confirmation </b>
 
@@ -113,7 +84,6 @@ Confirm the transfer by hitting the "Sign and Send" button.
 
 ![img](assets/Internal-transfer-step-041.png#center)
 
-<<<<<<< HEAD
 !!! hint 
     If everything went fine, you are going to see a success message at the button of the page
 
@@ -121,15 +91,6 @@ Confirm the transfer by hitting the "Sign and Send" button.
 
 !!! hint 
     Now head over to the substrate explorer to check if the DApp successfully wrote the transfer into a block
-=======
-!!! Hint 
-    If everything went fine you will see a success message at the button of the page
-
-![img](assets/Internal-transfer-step-042.png#center)
-
-!!! Hint 
-    Now head over to the substrate explorer to check if the transfer was successfully written into a block
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
 
 ![img](assets/Internal-transfer-step-043.png#center)
 
@@ -142,13 +103,8 @@ Confirm the transfer by hitting the "Sign and Send" button.
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-<<<<<<< HEAD
 Many may ask themselves, is Kuari one single chain, or how does it work to have an ethereum and substrate side at the same time?
 Well, to make a long story short... Kusari is one single chain BUT it runs an ethereum simulation in parallel.
-=======
-Many may ask themselves, is Kuari one single chain or how does is work to have and ethereum and substrate side at the same time?
-Well, to make a long story short... Kusari is one single chain BUT it runs a ethereum simulation in parallel.
->>>>>>> 5e93465bde5584aa2b45f80f96580c288714c521
 
 How does this work?
 
