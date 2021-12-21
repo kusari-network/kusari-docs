@@ -101,7 +101,7 @@ Confirm the transfer by hitting the "Sign and Send" button.
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-Many may ask themselves, is Kuari one single chain or how does is work to have and ethereum and substrate side at teh same time?
+Many may ask themselves, is Kuari one single chain or how does is work to have and ethereum and substrate side at the same time?
 Well, to make a long story short... Kusari is one single chain BUT it runs a ethereum simulation in parallel.
 
 How does this works?
