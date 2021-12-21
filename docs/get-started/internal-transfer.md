@@ -25,7 +25,7 @@ The transfer is done in four (4) steps:
 ### <b> STEP 01 - Setup </b>
 
 !!! Hint
-    Make sure you selected the "Transfers" function of our DApp (see picture below)
+    Make sure you have selected the "Transfers" function of our DApp (see picture below)
 
 ![img](assets/Internal-transfer-step-01.png#center)
 
@@ -44,7 +44,7 @@ The transfer is done in four (4) steps:
 
 !!! hint
     Click next once you have selected your address.
-    If you have trouble seeing the dropdown, please reload the page or close your browser and restart the process.
+    If you have trouble seeing the dropdown menu, please reload the page or close your browser and restart the process.
 
 ### <b> STEP 02 - Origin and Destination Address </b>
 
@@ -103,7 +103,7 @@ Confirm the transfer by hitting the "Sign and Send" button.
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-Many may ask themselves, is Kuari one single chain, or how does it work to have an ethereum and substrate side at the same time?
+Many may ask themselves whether kusari is a single chain when it has both an ethereum and substrate side at the same time?
 Well, to make a long story short... Kusari is one single chain BUT it runs an ethereum simulation in parallel.
 
 How does this work?
@@ -116,8 +116,8 @@ I want to direct your focus to the SUBSTRATE RUNTIME module of the Substrate Nod
 The Runtime hosts all the code that makes Kusari unique, and it's composed of code pallets. 
 As you can see, the democracy function of our chain is also a code pallet and allows our community to govern the chain. Likewise, the staking pallet enables our community to run validators and stake as nominators. Like those pallets, the EVM is another pallet that allows our community to interact with eth-based smart contracts and cross-chain bridges.
 
-By performing the transfer described in step 01, we are transferring coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and visa versa, that's it :D.
-As briefly touched on earlier, the EVM side opens up many new opportunities to you to utilize your KSI coins.
+By performing the transfer described in step 01, we are transferring coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and vice versa, that's it :D.
+As briefly touched on earlier, the EVM side opens up many new opportunities for you to utilize your KSI coins.
 
 ![img](assets/node-architecture-01.png#center)
 
