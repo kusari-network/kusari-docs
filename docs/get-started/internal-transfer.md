@@ -25,7 +25,7 @@ The transfer is done in four (4) steps:
 ### <b> STEP 01 - Setup </b>
 
 !!! Hint
-    Make sure you selected the "Transfers" function of your DApp (see picture below)
+    Make sure you selected the "Transfers" function of our DApp (see picture below)
 
 ![img](assets/Internal-transfer-step-01.png#center)
 
