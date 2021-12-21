@@ -2,20 +2,20 @@
 ---
 Cheers Friends, 
 
-this guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
+This guide will teach you how to transfer your funds from our "substrate" side to our Ethereum-Virtual-Machine (EVM).
 Remember, the EVM side of our chain allows you to interact with many eth-based smart contracts and projects that eventually will move to Kusari.
-Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades you must use the EVM.
+Moreover, our cross-chain bridges will be attached to our EVM module, so for you to utilize cross-chain trades, you must use the EVM.
 
 That said, let me tell you how we tackle this.
-First, I will walk you through the process so that you can get started right away.
-Second, I will elablorate a bit more on the concept so that the interested lads can read up.
+First, I will walk you through the process to get started right away.
+Second, I will elaborate a bit more on the concept so that the interested lads can read up.
 
 ## <b> PART 1 - WALKTHROUGH </b>
 !!! Hint
     You can access the TRANSFER function here: LINK
-    You can watch me walking you through the process in this video: LINK
+    You can watch me walk you through the process in this video: LINK
 
-The tansfer is done in four (4) steps:
+The transfer is done in four (4) steps:
 
 - Setup 
 - Origin and Destination Address
@@ -31,43 +31,47 @@ The tansfer is done in four (4) steps:
 
 
 !!! hint 
-    You can change the transfer direction with the center button.
+    You can change the transfer directly with the center button.
     Confirm the direction by clicking on next
 
 ![img](assets/Internal-transfer-step-011.png#center)
 
 !!! hint 
     Click on "Connect SwapDex Account" to connect your substrate wallet to the DApp. 
-    This substrate address need to hold the funds you wish to transfer.
-    If you are using the polkadot.js browser extension to manage your addresses then the DApp will offer you a dropdown menu.
+    This substrate address needs to hold the funds you wish to transfer.
+    If you use the polkadot.js browser extension to manage your addresses, the DApp will offer you a dropdown menu.
 
 ![img](assets/Internal-transfer-step-012.png#center)
 
 !!! hint
-    Click next once you selected your address.
-    If you have trouble seeing the dropdown please reaload the page or close your browser and restart the process.
+    Click next once you have selected your address.
+    If you have trouble seeing the dropdown, please reload the page or close your browser and restart the process.
 
 ### <b> STEP 02 - Origin and Destination Address </b>
 
-In this step you can choose to either connect to your MetaMask wallet to automatically fetch the correct address or you can paste any eth-based address.
+In this step, you can choose to either connect to your MetaMask wallet and automatically fetch the correct address, or you can paste any eth-based address.
 
 ![img](assets/Internal-transfer-step-02.png#center)
 
 !!! hint
-    Once you selected a target address you can confirm by clicking on next.
-    You need to confirm the selected accounts and click on "Ok"
+    Once you have selected a target address, you can confirm by clicking next.
+    You need to confirm the selected accounts and click on "Ok".
 
 ![img](assets/Internal-transfer-step-021.png#center)
 
 ### <b> STEP 03 - Amount </b>
 
-In this step you need to select the amonut you want to transfer and confirm by clicking on the "Transfer Amount" button.
+In this step, you need to select the amount you want to transfer and confirm by clicking on the "Transfer Amount" button.
+
+!!! Warning
+    It is generally advised to test a transaction with a small amount, especially if you are not familiar with the transfer function so far.
+    The correct transfer of funds is your sole responsibility! No refunds are possible.
 
 ![img](assets/Internal-transfer-step-03.png#center)
 
 !!! hint
-    Open the substrate or evm explorer to be prepared to check that the tranfer went through successfully
-    substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer)
+    Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully. <br>
+    Substrate explorer [Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer) <br>
     EVM explorer [Link](https://evm.kusari.network/)
 
 
@@ -83,38 +87,38 @@ Confirm the transfer by hitting the "Sign and Send" button.
 ![img](assets/Internal-transfer-step-041.png#center)
 
 !!! hint 
-    If everything went fine you will see a success message at the button of the page
+    If everything went fine, you are going to see a success message at the button of the page
 
 ![img](assets/Internal-transfer-step-042.png#center)
 
 !!! hint 
-    Now head over to the substrate explorer to check if the transfer was successfully written into a block
+    Now head over to the substrate explorer to check if the DApp successfully wrote the transfer into a block
 
 ![img](assets/Internal-transfer-step-043.png#center)
 
 
 !!! success
     Congrats, you successfully swapped KSI from the substrate to the EVM side.
-    Feel free to reverse the swap and use the tranfer function to your needs. 
+    Feel free to reverse the swap and use the transfer function to your needs. 
 
 
 ## <b> PART 2 - WHAT HAPPENS IN THE BACKGROUND </b>
 ---
 
-Many may ask themselves, is Kuari one single chain or how does is work to have and ethereum and substrate side at teh same time?
-Well, to make a long story short... Kusari is one single chain BUT it runs a ethereum simulation in parallel.
+Many may ask themselves, is Kuari one single chain, or how does it work to have an ethereum and substrate side at the same time?
+Well, to make a long story short... Kusari is one single chain BUT it runs an ethereum simulation in parallel.
 
-How does this works?
+How does this work?
 
-To answer this question we need to take a look at the node architecture. Nodes are pillars of our distributed network and they run all the neccessary code. 
+To answer this question, we need to look at the node architecture. Nodes are the pillars of our distributed network, and they run all the necessary code.
 
 ![img](assets/node-architecture.png#center)
 
-I'd like to direct your focus to the SUBSTRATE RUNTIME module of the Substrate Node. 
-The Runtime hosts all the code that makes Kusari unique and it's composed of code pallets. 
-As you can see the democracy function of our chain is also a code pallet and allows our community to govern the chain. Likewise, the staking pallet allows our community to run validators and stake as nominators. Similar to those pallets, the EVM is another pallet that allows our community to interact with eth-based smart contracts and the cross-chain bridges.
+I want to direct your focus to the SUBSTRATE RUNTIME module of the Substrate Node. 
+The Runtime hosts all the code that makes Kusari unique, and it's composed of code pallets. 
+As you can see, the democracy function of our chain is also a code pallet and allows our community to govern the chain. Likewise, the staking pallet enables our community to run validators and stake as nominators. Like those pallets, the EVM is another pallet that allows our community to interact with eth-based smart contracts and cross-chain bridges.
 
-What we are doing by performing the transfer described in step 01 is that we are transfering coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and visa versa that's it :D.
+By performing the transfer described in step 01, we are transferring coins from the SUBSTRATE RUNTIME ENVIRONMENT into the EVM pallet and visa versa, that's it :D.
 As briefly touched on earlier, the EVM side opens up many new opportunities to you to utilize your KSI coins.
 
 ![img](assets/node-architecture-01.png#center)
