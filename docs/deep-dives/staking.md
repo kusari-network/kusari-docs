@@ -22,7 +22,7 @@ This guide will mainly focus on helping you decide to either become a nominator 
 
 In staking, you can be either a nominator or a validator.
 
-As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the chain's native coin. You can look at the [nominator guide](../what-to-try/nominator.md) to understand your responsibilities as a nominator and at the [validator guide](../what-to-try/validator.md) to understand what you need to do as a validator.
+As a nominator, you can nominate validator candidates that you trust to help you earn rewards in the chain's native coin. You can look at the <a href="https://docs.kusari.network/what-to-try/nominator/" target="_blank">nominator guide</a> to understand your responsibilities as a nominator and at the <a href="https://docs.kusari.network/validator-guides/validator/" target="_blank">validator guide</a> to understand what you need to do as a validator.
 
 ### ** Nomination Period**
 
@@ -286,15 +286,7 @@ In this paragraph we assume that misconduct is conducted unintentionally and wan
 - Basic security advise applies, use a firewall, manage user access, use SSH certificate access etc.
 - Avoid using your server as a general purpose machine. Greater interaction = greater risk.
 
-
-## **Reward Distribution**
 ---
-### **Reward Distribution Example**
 
-## **Inflation**
----
-### **Why Stake?**
-### **Why not Stake?**
-
-## **How many Validators does Kusari has?**
----
+!!! Warning
+    Work in progress content can change and it's not definitive :building_construction:.

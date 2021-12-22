@@ -75,7 +75,7 @@ Security is of utmost importance if you consider operating a successfull validat
 
 **Configure a Firewall**
 
-The default firewall configuration tool for Ubuntu is [ufw](https://help.ubuntu.com/community/UFW). UFW stands for uncomplicated firewall and helps ease IP-tables firewall configuration, and provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.
+The default firewall configuration tool for Ubuntu is <a href="https://help.ubuntu.com/community/UFW" target="_blank"> UFW </a>. UFW stands for uncomplicated firewall and helps ease IP-tables firewall configuration, and provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.
 
 Configure firewall ports to allow SSH and Validator service to communicate.
 ```
@@ -87,7 +87,7 @@ sudo ufw enable
 
 **Setup Fail2Ban**
 
-[Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) is a tool that scans log files and bans IPs that show malicious signs for instance too many password failures, seeking for exploits, etc.
+<a href="https://www.fail2ban.org/wiki/index.php/Main_Page" target="_blank"> Fail2Ban </a> is a tool that scans log files and bans IPs that show malicious signs for instance too many password failures, seeking for exploits, etc.
 Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time.
 It provides basic-level protection against distributed brute-force attacks.
 ```
@@ -98,7 +98,7 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
  
 ### Install Kusari Validator binaries
 The following command will fetch / download the Kusari validator binaries and copy them to a specific folder.
-Check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/kusari)
+Check your ubuntu version and choose the correct file for it. <a href="https://download.starkleytech.com/kusari" target="_blank"> check your ubuntu version and choose the correct file for it </a>
 
 ```
 wget https://download.starkleytech.com/kusari/{==FILE_NAME_FROM_ABOVE==} -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
@@ -117,7 +117,7 @@ sudo adduser kusari
     Only the password is mandatory, the other parameters can be left blank.
 
 ### Create the Kusari Validator Service File
-In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
+In the next step, we will use <a href="https://help.ubuntu.com/community/Nano" target="_blank"> Nano </a>, a simple terminal-based text editor, to create a file that contains service instructions.
 The following command creates a file named `kusari.service` at the following location: `lib/systemd/system/`
 
 ```
@@ -159,7 +159,7 @@ sudo systemctl enable kusari && sudo service kusari start
 
 !!! Success
     Your validator will now run as a systemd process so that it will automatically restart on server reboots or crashes (and helps to avoid to getting slashed!)
-    For more information on systemd you can watch this quick [tutorial](https://youtu.be/N1vgvhiyq0E) on YouTube.
+    For more information on systemd you can watch this quick <a href="https://youtu.be/N1vgvhiyq0E" target="_blank"> YouTube Tutorial </a>.
 
 ### Check if validator is started
 To ensure that the Kusari Validator process works please execute the following command:
@@ -177,7 +177,7 @@ sudo reboot -h now
 ```
 
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5](https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5)
+Check if your node is appearing in the telemetry UI : <a href="https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5" target="_blank"> Telemetry UI </a>
 
 !!! info
     If you want to find your node here you must have changed the name parameter in the previous step (`--name "A Node Name"`)
@@ -189,7 +189,7 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 ## Part 2 - Assign the node to an account
 ---
 The second part of this guide will complete the validator setup by connecting your server with your Substrate account.
-Make sure you have some KSI in your substrate wallet. In case you need KSI please see the [claim](../get-started/claims.md) section. 
+Make sure you have some KSI in your substrate wallet. In case you need KSI please see the <a href="https://docs.kusari.network/get-started/claims/" target="_blank"> claim </a> section or watch our <a href="https://youtu.be/lPRF43-9IGU" target="_blank"> YoutTube Walkthrough </a>. 
 
 ### What are stash and controller accounts?
 
@@ -208,14 +208,14 @@ However, the Controller Account can't move the bonded funds out of the Stash Acc
 !!! warning
     **Never disclose your Keystore file or your 12/24 words seed phrase.**
 
-Before we start with the creation of both accounts please consider to download the Polkadot{.js} browser extension is our recommended way to create substrate based accounts. [Pokadot.js](https://polkadot.js.org/extension/) is very comparable with Meta Mask for Ethereum especially in terms of usability, security and functionality.
+Before we start with the creation of both accounts please consider to download the Polkadot{.js} browser extension is our recommended way to create substrate based accounts. <a href="https://polkadot.js.org/extension/" target="_blank">Pokadot.js</a> is very comparable with Meta Mask for Ethereum especially in terms of usability, security and functionality.
 
 !!! tip
-    :point_right: Download [Pokadot.js](https://polkadot.js.org/extension/) browser extension
+    :point_right: Download <a href="https://polkadot.js.org/extension/" target="_blank">Pokadot.js</a> browser extension
 
 ### Create the Controller Account
 
-**Step 1:** Open the [Polkadot{.js}](https://polkadot.js.org/extension/) browser extension by clicking the logo on the top bar of your browser. You will see a browser popup, not unlike the one below.
+**Step 1:** Open the <a href="https://polkadot.js.org/extension/" target="_blank">Pokadot.js</a> browser extension by clicking the logo on the top bar of your browser. You will see a browser popup, not unlike the one below.
 
 ![browser_extension](assets/polkadot_plugin_js.png#center)
 
@@ -262,8 +262,8 @@ Copy the session key. It will look like this:
 ### Apply on Kusari Explorer
 ---
 
-- Visit the substrate [ explorer](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts)
-- Go to the Network Tab -> Staking -> Account Actions ([Link](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions))
+- Visit the substrate <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/accounts" target="_blank">explorer</a>
+- Go to the Network Tab -> Staking -> Account Actions (<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions" target="_blank">Link</a>)
 ![img](assets/validator_01.png)
 
 - Hit the `+ Validator` Button
@@ -293,7 +293,7 @@ You can also determine if you would like to receive nominations with the "allows
 
 - Hit bond & validate
 
-- Visit the **[Waiting Tab](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/waiting)** to see your validator waiting until the era finishes
+- Visit the **<a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/waiting" target="_blank">Waiting Tab</a>** to see your validator waiting until the era finishes
 
 !!! success
     Alright mate! You are all set :D

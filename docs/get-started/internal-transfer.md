@@ -71,7 +71,7 @@ In this step, you need to select the amount you want to transfer and confirm by 
 !!! hint
     Open the substrate or EVM explorer to be prepared to check that the transfer went through successfully. <br>
     <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/explorer" target="_blank"> Substrate Explorer </a> <br>
-    <a href="https://evm.kusari.network/" target="_blank"> EVM Explorer </a>
+    <a href="https://evm.kusari.network/blocks" target="_blank"> EVM Explorer </a>
 
 ### <b> STEP 04 - Confirmation </b>
 
