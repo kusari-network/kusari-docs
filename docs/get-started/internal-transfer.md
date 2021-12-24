@@ -30,7 +30,7 @@ The transfer is done in four (4) steps:
 ![img](assets/Internal-transfer-step-01.png#center)
 
 !!! hint 
-    You can change the transfer directly with the center button.
+    You can change the transfer direction with the center button.
     Confirm the direction by clicking on next
 
 ![img](assets/Internal-transfer-step-011.png#center)
