@@ -1,5 +1,5 @@
 site_name: KUSARI Wiki
-copyright: Copyright &copy; 2021 Kusari
+copyright: Copyright &copy; 2022 Kusari
 repo_url: https://github.com/kusari-network/kusari-docs.git
 
 markdown_extensions:
@@ -61,7 +61,9 @@ extra_javascript:
 
 
 nav:
-  - Home: 'index.md'
+  - Home: 
+      - 'index.md'
+      - 'Quick Start' : 'home/quick-start.md'
   - 'Credits': 'credits.md'
   - 'Get Started': 
       - 'get-started/index.md'
