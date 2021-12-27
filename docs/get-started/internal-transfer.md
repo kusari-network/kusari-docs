@@ -19,7 +19,7 @@ The transfer is done in four (4) steps:
 
 - Setup 
 - Origin and Destination Address
-- Amount
+- Amount    
 - Confirmation
 
 ### <b> STEP 01 - Setup </b>

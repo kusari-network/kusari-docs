@@ -166,11 +166,16 @@ To ensure that the Kusari Validator process works please execute the following c
 ```
 ps aux | grep kusari
 ```
-
 You should see a similar output:
 ```
 kusari  8108 9.9 21.0 1117976 419772 ?   Ssl May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain kusari
 ```
+Furthermore, you can monitor your validator's logs by executing the following command:
+```
+journalctl -u kusari.service --follow
+```
+To exit the 'follow' mode you need to hit ++ctrl+c++
+
 ### Reboot to be sure everything is restarted correctly:
 ```
 sudo reboot -h now
