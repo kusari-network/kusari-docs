@@ -1,4 +1,4 @@
-site_name: KUSARI Wiki
+site_name: Kusari Knowledge Base
 copyright: Copyright &copy; 2022 Kusari
 repo_url: https://github.com/kusari-network/kusari-docs.git
 
@@ -35,8 +35,8 @@ theme:
     
   name: material
   custom_dir: overrides
-  logo: assets/kusari-logo.png
-  favicon: assets/kusari-logo.png
+  logo: assets/logokusari.png
+  favicon: assets/logokusari.png
   language: en
   
 plugins:
