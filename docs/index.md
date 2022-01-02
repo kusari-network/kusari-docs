@@ -1,7 +1,7 @@
 
-# <b>WELCOME</b>
+# <b>WELCOME TO</b>
 
-![kusari](assets/kusari-logo-dark-02.png)
+![kusari](assets/kusari-logo-tagline-dark.png)
 
 ---
 !!! Warning

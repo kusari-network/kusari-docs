@@ -1,7 +1,7 @@
 :root {
-    --md-primary-fg-color:        #b8860b;
-    --md-primary-fg-color--light: #b8860b;
-    --md-primary-fg-color--dark:  #b8860b;
+    --md-primary-fg-color:        #13111a;
+    --md-primary-fg-color--light: #13111a;
+    --md-primary-fg-color--dark:  #13111a;
   }
   img[src*='#center'] { 
     display: block;
