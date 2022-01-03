@@ -47,7 +47,7 @@ Every validator can set a customized commission, and the rest is paid **pro-rata
 
 Notice in particular that the validator is rewarded twice: once in commission fees for validating (if their commission rate is above 0%) and once for nominating itself with their stake. If a validator's commission is set to 100%, no coins will be paid out to any nominations in the nominator pool.
 
-![img](assets/reward-distr.png#center)
+![img](assets/reward-distr-02.png#center)
 
 ### ** Rewards Mechanism**
 
