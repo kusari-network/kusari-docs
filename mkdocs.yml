@@ -64,6 +64,7 @@ nav:
   - Home: 
       - 'index.md'
       - 'Quick Start' : 'home/quick-start.md'
+      - 'FAQs': 'home/FAQs.md'
   - 'Credits': 'credits.md'
   - 'Get Started': 
       - 'get-started/index.md'
@@ -71,7 +72,7 @@ nav:
       - 'Claims': 'get-started/claims.md'
       - 'EVM <-> Substrate Transfers' : 'get-started/internal-transfer.md'
       - 'Endpoints': 'get-started/endpoints.md'
-      - 'Transer Balances': 'get-started/transfer-balances.md'
+      - 'Transfer Balances': 'get-started/transfer-balances.md'
   - 'What to Try?':
       - 'Create an Account': 'what-to-try/account-generation.md'
       - 'Become a Nominator': 'what-to-try/nominator.md'

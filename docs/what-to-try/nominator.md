@@ -37,6 +37,11 @@ The "Staking Overview" subsection will show you all the active validators and th
 - (5) the era points they've earned in the current era
 - (6) and the last block number that they produced. 
 
+!!! attention
+    **What does oversubscribed mean?** <br>
+    Maximum number of Validators a Nominator is able to stake/delegate to is 16.
+    Validators can receive up to 256 nominations before they are oversubscribed. (76,800 nominations will receive rewards) Once oversubscribed, the amount of KSI nominated is deciding whether you'll receive rewards or not.
+
 ![browser_extension](assets/nominator_02.png#center)
 
 If you click on the (7) chart button, it will take you to the "Validator Stats" page for that validator that shows you more detailed and historical information about the validator's stake, rewards, and slashes.

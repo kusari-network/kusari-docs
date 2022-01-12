@@ -2,11 +2,13 @@
     --md-primary-fg-color:        #13111a;
     --md-primary-fg-color--light: #13111a;
     --md-primary-fg-color--dark:  #13111a;
+    --md-text-link-color: #b8860b;
   }
   img[src*='#center'] { 
     display: block;
     margin: auto;
 }
+
 
 .cards-container {
   display: table-row;

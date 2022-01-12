@@ -131,7 +131,7 @@ Remember, we didn't send a miner down to work unless the canary came out alive. 
             </a>
         </td>
         <td>
-            <a href="https://kusari-network.github.io/kusari-docs/what-to-try/validator/" target="_blank">
+            <a href="https://docs.kusari.network/validator-guides/validator/" target="_blank">
                 <img class="guide-image" src="assets/kusari-docs-become-a-validator.png" alt="Drawing" width="300" height="150">
                     <div class="cards-body">
                         <h5>Become a Validator</h5>
