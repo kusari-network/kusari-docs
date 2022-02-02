@@ -1,5 +1,5 @@
 
-# <b>WELCOME TO</b>
+# <b>WELCOME TO LEE</b>
 
 ![kusari](assets/kusari-logo-tagline-dark.png)
 
