@@ -65,7 +65,7 @@ Login to your server as root.
 
  
 ```
-service kusari stop && wget https://download2.starkleytech.com/kusari/swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 && chmod 777 swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 && mv swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 /usr/bin/swapdex -f && runuser -l  kusari -c 'swapdex purge-chain --chain kusari -y' && service kusari start && journalctl -f -u kusari  
+service kusari stop && wget https://download2.starkleytech.com/kusari/swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 && chmod 777 swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 && mv swapdex_ubuntu_21_10-kusari-polkadot-v0.9.18-8dfd0c9a-936 /usr/bin/swapdex -f && runuser -l  kusari -c 'swapdex purge-chain --chain kusari -y'   
 ```
 
 !!! success
