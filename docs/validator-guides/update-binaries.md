@@ -25,6 +25,9 @@ Learn more about the reasons behind this update in the following section.
 
 ![img](assets/update_process.png#center)
 
+!!! warning
+    Make sure to update your OS to Ubuntu 21.10 since the new binaries are compiled for that Ubuntu version. You can follow our <a href="https://youtu.be/n_KXf_fEOgE" target="_blank" style="color:red">online guide</a> to conduct the OS update. Other OS versions might work as well but are under your own risk. 
+
 ## Step 1 - Pause / Chill your Validator
 ---
 Visit the <a href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fws.kusari.network#/staking/actions" target="_blank" style="color:red">substrate portal</a> and navigate to the staking tab and select accounts. 
@@ -81,7 +84,7 @@ Execute the following command to start your validator and the sync process.
 
 Since we cleared / purged the old binaries' data your validator need to download the full database / blocks again. This sync process should not take long thanks to the improvements in the P2P Network Layer. 
 
-However, make sure to fully sync your validator before you restart your validator on the substrate portal. If your validator is not in sync, and you start get elected to the active set you will miss opportunities to author blocks and might get chilled as a consequence. 
+However, make sure to fully sync your validator before you restart your validator on the substrate portal. If your validator is not in sync, and you get elected to the active set you will miss opportunities to author blocks and might get chilled as a consequence. 
 
 You can observe the progress either in the logs or on our telemetry UI : <a href="https://telemetry.polkadot.io/#list/0x4959f8d87d40d9ef516459ff177111bb03d875e5a7ed69282f6b689a707b69f5" target="_blank" style="color:red"> Telemetry UI </a>
 
