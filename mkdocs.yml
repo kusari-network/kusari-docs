@@ -85,6 +85,7 @@ nav:
       - 'Validator Payout Overview': 'validator-guides/validator-payout-overview.md'
       - 'Secure your Validator': 'validator-guides/secure-validator.md'
       - 'Stop Validating': 'validator-guides/stop-validating.md'
+      - 'Update Binaries' : 'validator-guides/update-binaries.md'
   - 'Troubleshooting':
       - 'Resolve Errors' : 'troubleshooting/01-substrate-error-codes.md'
       - 'Glossary' : 'troubleshooting/02-Glossary.md'
