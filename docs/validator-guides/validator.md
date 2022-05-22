@@ -31,12 +31,16 @@ We benchmarked the transactions weights on the Kusari network on standard hardwa
     Anything between the lower-end and ideal hardware should be sufficient to run a validator on the Kusari test network. 
 
 
-## Using Ubuntu 21.04: 
+## Using Ubuntu 21.10: 
 ---
 ### Update your Ubuntu
 ```
 sudo apt-get update
 ```
+
+!!! hint
+    If your VPS provider does not deliver Ubuntu 21.10 you can update your Ubuntu version manually. 
+    Please follow our <a href="https://youtu.be/n_KXf_fEOgE" target="_blank" style="color:red">online guide</a>.
 
 ### Network Time Protocol (NTP) Client
 
