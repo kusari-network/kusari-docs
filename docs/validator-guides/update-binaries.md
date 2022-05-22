@@ -125,6 +125,12 @@ Finally, set Session Keys and sign the transaction and your validator should joi
 
 ![img](assets/update_step_6_2.png#center)
 
+Finally, click validate and set your validator preferences. Keep in mind that some users may nominate you because of your commission settings, so it's recommended to keep the former commission settings or inform your nominators that you plan to change the percentage.
+
+![img](assets/update_step_6_3.png#center)
+
+![img](assets/update_step_6_4.png#center)
+
 !!! success
     You successfully finished the update process. Congrats mate!
 
