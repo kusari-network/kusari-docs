@@ -223,7 +223,7 @@ You can find further information in the <a href="https://docs.kusari.network/dee
 
 ### **I want to switch my VPS provider/Change my server hardware. What do I need to consider?**
 
-WHAT ABOUT CHILLING AND SESSION KEYS DO I USE OLD ONE AND I AM GOOD TO GO?
+Go to the account actions tab under staking in the substrate explorer and hit the "STOP" button (moves your validator into "chilled" state) before removing your VPS. Make sure the Validator is chilled, then you can continue to unbond your funds safely with a 7 days unbonding period. 
 
 ### **I ran out of storage on my Validator. How do I migrate without the risk of getting slashed/losing funds?**
 -> look above
